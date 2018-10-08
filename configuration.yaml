@@ -65,6 +65,13 @@ tts:
 # Cloud
 cloud:
 
+# ubiquiti for device tracking
+device_tracker:
+   - platform: unifi_direct
+     host: !secret UNIFI_IP
+     username: !secret UNIFI_USERNAME
+     password: !secret UNIFI_PASSWORD
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
